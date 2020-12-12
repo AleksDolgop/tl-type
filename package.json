@@ -1,23 +1,23 @@
 {
-  "name": "language-tl-type",
+  "name": "tl-type",
   "displayName": "TL type",
   "description": "TL type support",
-  "icon": "images/tl-type.png",
   "version": "0.0.1",
   "publisher": "aleksdolgop",
+  "icon": "images/tl-type.png",
   "engines": {
     "vscode": "^1.52.0"
   },
   "categories": [
-    "Languages"
+    "Programming Languages"
   ],
   "contributes": {
     "languages": [
       {
-        "id": "tl-type",
+        "id": "typelanguage",
         "aliases": [
-          "TL",
-          "tl-type"
+          "Type language",
+          "typelanguage"
         ],
         "extensions": [
           ".tl"
@@ -27,9 +27,9 @@
     ],
     "grammars": [
       {
-        "language": "tl-type",
+        "language": "typelanguage",
         "scopeName": "source.tl",
-        "path": "./grammars/typelanguage.tmLanguage.json"
+        "path": "./syntaxes/typelanguage.tmLanguage.json"
       }
     ]
   },

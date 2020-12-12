@@ -1,0 +1,93 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Type language",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#params"
+		}
+	],
+	"repository": {
+		"comments": {
+			"name": "comment.line.double-slash",
+			"begin": "//",
+			"end": "\n"
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.tl",
+				"match": "^[-]{3}(types|functions)[-]{3}"
+			}]
+		},
+		"types": {
+			"patterns": [
+				{
+					"match": "^(\\w*|\\w*.\\w*)(#[a-f0-9]+)",
+					"captures": {
+						"1" :{
+							"name": "entity.name.function"
+						},
+						"2" :{
+							"name": "constant.numeric"
+						}
+					}
+				},
+				{
+					"match": "= (\\w*|\\w*.\\w*);\n",
+					"captures": {
+						"1" :{
+							"name": "entity.name.function"
+						}
+					}
+				},
+				{
+					"match": "(Vector)<(\\w*)>",
+					"captures": {
+						"1" :{
+							"name": "entity.name.function"
+						},
+						"2" :{
+							"name": "entity.name.function"
+						}
+					}
+				},
+				{
+					"match": ":(?!Vector)(?!(int256|int128|string|int|long|bytes|#|flags))(\\w*)",
+					"captures": {
+						"1" :{
+							"name": "entity.name.function"
+						},
+						"2" :{
+							"name": "entity.name.function"
+						}
+					}
+				},
+				{
+					"match": "(int256|int128|string|int|long|bytes|#|flags\\.\\d\\?)",
+					"captures": {
+						"1" :{
+							"name": "variable.language"
+						}
+					}
+				},
+				{
+					"match": "(\\w*):",
+					"captures": {
+						"1" :{
+							"name": "markup.bold"
+						}
+					}
+				}
+			]
+		}
+	},
+	"scopeName": "source.tl"
+}
