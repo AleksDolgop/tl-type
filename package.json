@@ -4,7 +4,7 @@
   "description": "TL type support",
   "icon": "images/tl-type.png",
   "version": "0.0.1",
-  "publisher": "AleksDolgop",
+  "publisher": "aleksdolgop",
   "engines": {
     "vscode": "^1.52.0"
   },
