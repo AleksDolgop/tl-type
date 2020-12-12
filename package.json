@@ -1,0 +1,45 @@
+{
+  "name": "language-tl-type",
+  "displayName": "TL type",
+  "description": "TL type support",
+  "icon": "images/tl-type.png",
+  "version": "0.0.1",
+  "publisher": "AleksDolgop",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "tl-type",
+        "aliases": [
+          "TL",
+          "tl-type"
+        ],
+        "extensions": [
+          ".tl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "tl-type",
+        "scopeName": "source.tl",
+        "path": "./grammars/typelanguage.tmLanguage.json"
+      }
+    ]
+  },
+  "homepage": "https://github.com/AleksDolgop/tl-type",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AleksDolgop/tl-type.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AleksDolgop/tl-type/issues"
+  },
+  "license": "MIT"
+}
