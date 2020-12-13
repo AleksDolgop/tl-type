@@ -2,11 +2,11 @@
   "name": "tl-type",
   "displayName": "TL type",
   "description": "TL type support",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "aleksdolgop",
   "icon": "images/tl-type.png",
   "engines": {
-    "vscode": "^1.52.0"
+    "vscode": "^1.0.0"
   },
   "categories": [
     "Programming Languages"
