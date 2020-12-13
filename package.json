@@ -2,7 +2,7 @@
   "name": "tl-type",
   "displayName": "TL type",
   "description": "TL type support",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "aleksdolgop",
   "icon": "images/tl-type.png",
   "engines": {

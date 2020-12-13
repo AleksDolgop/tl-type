@@ -30,10 +30,10 @@
 		"types": {
 			"patterns": [
 				{
-					"match": "^(\\w*|\\w*.\\w*)(#[a-f0-9]+)",
+					"match": "^(\\S*)(#[a-f0-9]+)",
 					"captures": {
 						"1" :{
-							"name": "entity.name.function"
+							"name": "support.type"
 						},
 						"2" :{
 							"name": "constant.numeric"
@@ -41,7 +41,7 @@
 					}
 				},
 				{
-					"match": "= (\\w*|\\w*.\\w*);\n",
+					"match": "= (\\S*);",
 					"captures": {
 						"1" :{
 							"name": "entity.name.function"
@@ -49,40 +49,19 @@
 					}
 				},
 				{
-					"match": "(Vector)<(\\w*)>",
+					"match": "(\\w*):(#|flags\\.\\d*\\?|)(Vector|vector|(?:\\w*\\.\\w*|\\w*))(?:<(\\w*\\.\\w*|\\w*)>|)",
 					"captures": {
 						"1" :{
-							"name": "entity.name.function"
+							"name": "support.constant"
 						},
 						"2" :{
-							"name": "entity.name.function"
-						}
-					}
-				},
-				{
-					"match": ":(?!Vector)(?!(int256|int128|string|int|long|bytes|#|flags))(\\w*)",
-					"captures": {
-						"1" :{
-							"name": "entity.name.function"
-						},
-						"2" :{
-							"name": "entity.name.function"
-						}
-					}
-				},
-				{
-					"match": "(int256|int128|string|int|long|bytes|#|flags\\.\\d\\?)",
-					"captures": {
-						"1" :{
 							"name": "variable.language"
-						}
-					}
-				},
-				{
-					"match": "(\\w*):",
-					"captures": {
-						"1" :{
-							"name": "markup.bold"
+						},
+						"3" :{
+							"name": "entity.name.function"
+						},
+						"4" :{
+							"name": "entity.name.function"
 						}
 					}
 				}
